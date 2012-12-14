@@ -1,0 +1,5 @@
+<parent parent-name="TEST_PARENT_NAME">
+  <child child-name="TEST_CHILD_NAME">
+    <grandchild grandchild-name="TEST_GRANDCHILD_NAME"/>
+  </child>
+</parent>
