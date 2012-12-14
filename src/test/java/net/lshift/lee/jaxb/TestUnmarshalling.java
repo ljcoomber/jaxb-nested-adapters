@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import net.lshift.lee.jaxb.pojo.Child;
 import net.lshift.lee.jaxb.pojo.Grandchild;
-import net.lshift.lee.jaxb.xml.ParentElement;
+import net.lshift.lee.jaxb.pojo.Parent;
+import net.lshift.lee.jaxb.xml.WrapperElement;
 
 import org.junit.Test;
 
@@ -12,7 +13,10 @@ import org.junit.Test;
 public class TestUnmarshalling {
   @Test
   public void test() throws Exception {
-    ParentElement parent = ParentElement.load("src/test/resources/test.xml");
+    WrapperElement wrapper = WrapperElement.load("src/test/resources/test.xml");
+    assertNotNull(wrapper);
+    
+    Parent parent = wrapper.getParent();
     assertNotNull(parent);
     assertEquals("TEST_PARENT_NAME", parent.getParentName());
     
