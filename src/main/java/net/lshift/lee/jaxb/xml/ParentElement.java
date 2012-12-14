@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import net.lshift.lee.jaxb.pojo.Child;
+
 @XmlRootElement(name = "parent")
 public class ParentElement {
   
@@ -17,7 +19,7 @@ public class ParentElement {
   private String parentName;
   
   @XmlElement
-  private ChildElement child;
+  private Child child;
 
   public ParentElement() {}
   
@@ -25,7 +27,7 @@ public class ParentElement {
     return parentName;
   }
   
-  public ChildElement getChild() {
+  public Child getChild() {
     return child;
   }
   

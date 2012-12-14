@@ -1,5 +1,10 @@
 package net.lshift.lee.jaxb.pojo;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import net.lshift.lee.jaxb.xml.adapter.ChildAdapter;
+
+@XmlJavaTypeAdapter(ChildAdapter.class)
 public class Child {
 
   private final String childName;

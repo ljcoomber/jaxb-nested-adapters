@@ -3,13 +3,15 @@ package net.lshift.lee.jaxb.xml;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
+import net.lshift.lee.jaxb.pojo.Grandchild;
+
 public class ChildElement {
   
   @XmlAttribute(name = "child-name")
   private String childName;
   
   @XmlElement
-  private GrandchildElement grandchild;
+  private Grandchild grandchild;
 
   public ChildElement() {}
   
@@ -17,7 +19,7 @@ public class ChildElement {
     return childName;
   }
   
-  public GrandchildElement getGrandchild() {
+  public Grandchild getGrandchild() {
     return grandchild;
   }
 }
